@@ -20,8 +20,21 @@ keys[i].onclick = function (e) {
     
     if (clear == btnVal){
         console.log("hi");
+        
                 // input.innerHTML =0;
-                input.innerHTML ="";
+                
+                input.innerHTML ="Жми сильнее";
+                
+                function joke() {
+                    input.innerHTML ="Ладно,сброшусь)";
+                        function joke1() {
+                            input.innerHTML =""
+                        }
+                        setTimeout(joke1, 1000);
+                }
+                               
+                setTimeout(joke, 1000);
+                
     } // Ввел условие срабатывания  и также следствия срабатывания (по аналогии с предущими условиями)
     
     e.preventDefault()
