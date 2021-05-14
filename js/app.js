@@ -1,3 +1,13 @@
+function outPutVal(input) {
+    function joke() {
+        input.innerHTML = "Ладно,сброшусь)";
+
+        setTimeout(()=> {
+            input.innerHTML = ""
+        }, 1000);
+    };
+    setTimeout(joke, 1000);
+};
 for (var keys = document.querySelectorAll("#calculator span"),
         operators = ["+", "-", "x", "÷"],
         clear = "C", // задекларировал переменную clear со значение C
@@ -8,14 +18,8 @@ for (var keys = document.querySelectorAll("#calculator span"),
             inputVal = input.innerHTML,
             btnVal = this.innerHTML,
             total;
-            function outPutVal() {
-                function joke() {
-                    input.innerHTML = "Ладно,сброшусь)";
-                    function joke1() {input.innerHTML = ""};
-                    setTimeout(joke1, 1000);
-                };
-                setTimeout(joke, 1000);
-                };
+
+
         if ("=" == btnVal) {
             var equation = inputVal,
                 lastChar = equation[equation.length - 1];
@@ -27,7 +31,7 @@ for (var keys = document.querySelectorAll("#calculator span"),
 
         if (clear == btnVal) {
             input.innerHTML = "Жми сильнее";
-            outPutVal();
+            outPutVal(input);
         } // Ввел условие срабатывания  и также следствия срабатывания (по аналогии с предущими условиями)
         e.preventDefault()
     };
