@@ -1,9 +1,9 @@
-function outPutVal(input) {
+function outPutVal(a) {
     function joke() {
-        input.innerHTML = "Ладно,сброшусь)";
+        a.innerHTML = "Ладно,сброшусь)";
 
         setTimeout(()=> {
-            input.innerHTML = ""
+            a.innerHTML = ""
         }, 1000);
     };
     setTimeout(joke, 1000);
